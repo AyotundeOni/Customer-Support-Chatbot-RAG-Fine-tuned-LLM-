@@ -6,7 +6,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Configuration
-API_KEY = "AIzaSyCHqU7dgZglpLQbDF-9LCXBw30_NJkoDF0" # User provided key
+API_KEY = os.environ["GOOGLE_API_KEY"]  # set in your environment / .env (never commit)
 INPUT_FILE = "shopify_complete_qa.jsonl"
 OUTPUT_FILE = "shopify_llm_rewritten_qa.jsonl"
 MODEL_NAME = "gemini-2.5-flash" 
